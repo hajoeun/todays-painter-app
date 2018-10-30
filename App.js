@@ -1,27 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import Body from './component/Body'
+import Login from './component/Login';
+import style from './style/App.style'
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Your</Text>
-        <Text style={styles.title}>Today's Painter</Text>
+      <View style={style.container}>
+        <Body content={<Login/>}/>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 40,
-    backgroundColor: '#ccc',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-  },
-  title: {
-    color: '#fff',
-    fontSize: 60
-  }
-});
+export default App;
